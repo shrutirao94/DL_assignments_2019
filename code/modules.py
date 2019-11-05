@@ -23,15 +23,15 @@ class LinearModule(object):
     Also, initialize gradients with zeros.
     """
     
-    ########################
-    # PUT YOUR CODE HERE  #
-    #######################
-    self.params = {'weight': None, 'bias': None}
-    self.grads = {'weight': None, 'bias': None}
-    raise NotImplementedError
-    ########################
-    # END OF YOUR CODE    #
-    #######################
+    self.MEAN = 0
+    self.STD = 0.0001
+    self.in_features = in_features
+    self.out_features = out_features
+    self.params = {'weight': np.random.normal(self.MEAN, self.STD, size=in_features),
+            np.zeros(in_features)}
+    self.grads = {'weight': np.zeros(in_features),
+            'bias': np.zeros(in_features)}
+
 
   def forward(self, x):
     """

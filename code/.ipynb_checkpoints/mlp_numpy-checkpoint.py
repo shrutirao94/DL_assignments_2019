@@ -37,11 +37,7 @@ class MLP(object):
     ########################
     # PUT YOUR CODE HERE  #
     #######################
-    self._n_inputs = n_inputs
-    self.n_hidden = n_hidden
-    self.n_classes = n_classes
-    self.neg_slope = neg_slope
-
+    raise NotImplementedError
     ########################
     # END OF YOUR CODE    #
     #######################
